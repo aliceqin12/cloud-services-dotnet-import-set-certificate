@@ -1,3 +1,12 @@
+---
+services: cloud-services
+platforms: dotnet
+author: msonecode
+---
+
+# How To Import Certificate and Grant Access To Private Key
+
+
 Introduction
 ----
 
