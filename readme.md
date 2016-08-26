@@ -10,7 +10,7 @@ author: msonecode
 Introduction
 ----
 
-This example shows how to import a certificate and grant access to the
+This example shows how to import certificate and grant access to the
 private key for a specific account in Cloud Service Startup tasks.
 
 
@@ -19,7 +19,7 @@ Prerequisites
 
 ***1. Create a Cloud Service***
 
-You may refer to the following guide on how to create an Azure Cloud
+You may refer to the following guidance on how to create an Azure Cloud
 Service.
 
 <https://azure.microsoft.com/en-us/documentation/articles/cloud-services-how-to-create-deploy-portal/>
@@ -28,7 +28,7 @@ Service.
 
 Please export the private key to a Personal Information Exchange (.pfx)
 file. You may refer to the “To export the .pfx and .cer files” section
-in the following link for detailed view of steps.
+in the following link for a detailed view of the steps.
 
 <https://technet.microsoft.com/en-us/library/dd261744.aspx>
 
@@ -36,7 +36,7 @@ Scenario 1
 ----
 
 In the first scenario, the certificate is packed in Cloud Service
-package, so redeployment is required in case the certificate needs to be
+package, so redeployment is required in case that the certificate needs to be
 replaced.
 
 ***1. Create files needed.***
@@ -60,7 +60,7 @@ Open “ServiceDefinition.csdef”, add &lt;Startup&gt; element under
 
 Replace the three arguments.
 
-• **Argument1**: the account that will be granted permission to access the
+• **Argument1**: the account that will be granted the permission to access the
 private key, e.g. User1
 
 • **Argument2**: the .pfx filename, e.g. cer.pfx
@@ -150,7 +150,7 @@ Portal and can be replaced without re-deploying the Cloud Service.
 ***1. Upload the certificate (.pfx file) in Azure Portal &gt; Cloud
 Service &gt; Certificates.***
 
-You may refer to the following link for detailed view of steps.
+You may refer to the following link for a detailed view of steps.
 
 <https://azure.microsoft.com/en-us/documentation/articles/cloud-services-configure-ssl-certificate/\#step-3-upload-a-certificate>
 
@@ -188,7 +188,7 @@ REM   If an error occurred, return the errorlevel.
 EXIT /B %errorlevel%
 ```
 
-***6. Add code to “startup.ps1”.***
+***6. Add the code to “startup.ps1”.***
 
 Note that the script locates the certificate by matching the subject
 with “\**\[Argument2 in step5\]*\*”.
