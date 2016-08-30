@@ -7,15 +7,13 @@ author: msonecode
 # How To Import Certificate and Grant Access To Private Key
 
 
-Introduction
-----
+## Introduction
 
 This example shows how to import certificate and grant access to the
 private key for a specific account in Cloud Service Startup tasks.
 
 
-Prerequisites
-----
+## Prerequisites
 
 ***1. Create a Cloud Service***
 
@@ -32,8 +30,7 @@ in the following link for a detailed view of the steps.
 
 <https://technet.microsoft.com/en-us/library/dd261744.aspx>
 
-Scenario 1
-----
+## Scenario 1
 
 In the first scenario, the certificate is packed in Cloud Service
 package, so redeployment is required in case that the certificate needs to be
@@ -141,8 +138,7 @@ Logs of the startup task can be found in
 “C:\\Resources\\temp\\*\[guid\].\[rolename\]*\\RoleTemp” of the Role
 instance.
 
-Scenario 2
-----
+## Scenario 2
 
 In the second scenario, the certificate is uploaded manually via Azure
 Portal and can be replaced without re-deploying the Cloud Service.
@@ -243,8 +239,7 @@ Logs of the startup task can be found in
 “C:\\Resources\\temp\\*\[guid\].\[rolename\]*\\RoleTemp” of the Role
 instance.
 
-Replacing certificate
-----
+## Replacing certificate
 
 For above Scenario 1, please replace the “xxx.pfx” file in the Cloud
 Service package, modify “startup.cmd” accordingly and re-deploy the
