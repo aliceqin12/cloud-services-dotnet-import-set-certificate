@@ -4,42 +4,39 @@ platforms: dotnet
 author: msonecode
 ---
 
-# How To Import Certificate and Grant Access To Private Key
+# How to import certificate and grant access to private key
 
 
 ## Introduction
 
-This example shows how to import certificate and grant access to the
-private key for a specific account in Cloud Service Startup tasks.
+This example shows how to import certificate and grant access to the private key for a specific account in Cloud service startup tasks.
 
 
 ## Prerequisites
 
 ***1. Create a Cloud Service***
 
-You may refer to the following guidance on how to create an Azure Cloud
-Service.
+You may refer to the following guidance on how to create an Azure Cloud service.
 
 <https://azure.microsoft.com/en-us/documentation/articles/cloud-services-how-to-create-deploy-portal/>
 
 ***2. Obtain a certificate that contains a private key***
 
-Please export the private key to a Personal Information Exchange (.pfx)
-file. You may refer to the “To export the .pfx and .cer files” section
+Please export the private key to a Personal Information Exchange (.pfx)file. You may refer to the “To export the .pfx and .cer files” section
 in the following link for a detailed view of the steps.
 
 <https://technet.microsoft.com/en-us/library/dd261744.aspx>
 
 ## Scenario 1
 
-In the first scenario, the certificate is packed in Cloud Service
+In the first scenario, the certificate is packed in Cloud service
 package, so redeployment is required in case that the certificate needs to be
 replaced.
 
 ***1. Create files needed.***
 
 Create a “startup.cmd” file and a “startup.ps1” file in the directory of
-the Role that will use the certificate. Place the .pfx file in the same
+Role that will use the certificate. Then, place the .pfx file in the same
 directory.
 
 ***2. Configure Service Definition File.***
@@ -153,7 +150,7 @@ You may refer to the following link for a detailed view of steps.
 ***2. Configure the Role to use the certificate.***
 
 Double click the Role, click **Certificates**, click **Add Certificate** and
-enter appropriate value for **Name** and **Thumbprint**.
+enter  appropriate value for **Name** and **Thumbprint**.
 
 ***3. Create files needed.***
 
@@ -241,16 +238,16 @@ instance.
 
 ## Replacing certificate
 
-For above Scenario 1, please replace the “xxx.pfx” file in the Cloud
+For the above Scenario 1, please replace the “xxx.pfx” file in the Cloud
 Service package, modify “startup.cmd” accordingly and re-deploy the
 Cloud Service.
 
-For above Scenario 2, please refer to following steps:
+For the above Scenario 2, please refer to following steps:
 
 1\. Upload the new certificate (.pfx file) in **Azure Portal &gt; Cloud
 Service &gt; Certificates**.
 
-2\. Go to **Configuration** and update **THUMBPRINT** to the one of the new
+2\. Go to **Configuration** and update **THUMBPRINT** to the one of the newest
 certificate.
 
-3\. Reboot the instance (in order to execute startup task).
+3\. Reboot the instance (to execute startup task).
